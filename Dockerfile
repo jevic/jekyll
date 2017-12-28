@@ -22,6 +22,7 @@ RUN apk upgrade --update \
     && ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime \
     && echo ${TZ} > /etc/timezone \
     && apk del .build-deps \
+    && gem install rake \
     && rm -rf /Gemfile* \
             /var/cache/apk/* \
             /usr/lib/lib/ruby/gems/*/cache/* \
